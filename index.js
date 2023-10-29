@@ -9,6 +9,7 @@ let finPomodoro = new Audio("/assets/audio/finPomodoro.mp3"); // https://lasonot
 // console.log(finPomodoro);
 
 let choixPomo = [25, 5, 25, 5, 25, 5, 25, 15];
+let choix = 0;
 
 //
 // ----------------------------
@@ -23,22 +24,36 @@ function countDown() {
 
   // Si le temps(en secondes) > 0, continuez le décompte et le décrémenter
   if (timeOut > 0) {
-    setTimeout(countDown, 70);
+    setTimeout(countDown, 1);
     timeOut--;
   } else if (timeOut == 0) {
     console.log("Fin du programme");
     finPomodoro.play();
+
+    // Incrémenter le choix
+    // Réinitialiser le choix à 0 si après le temps de pause 15 minutes
+    // dernier élément du tableau choix
+    if (choix < choixPomo.length - 1) {
+      choix++;
+    } else {
+      choix = 0;
+    }
+    console.log("Tour Pomodoro : ", choix);
     return 0;
   }
 }
 
-function cycle() {}
+function cycle() {
+  console.log("Temps de pomo : ", choixPomo[choix]);
+  duree = choixPomo[choix];
+}
 
 // ----------------------------
 // Evénements et Logique ------
 start.addEventListener("click", () => {
   console.log("click event");
-  duree = choixPomo[0];
+
+  cycle();
   timeOut = duree * 60;
   console.log("Temps déterminé pour le Pomodoro : ", duree, "minutes");
 
