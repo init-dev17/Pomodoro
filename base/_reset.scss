@@ -1,0 +1,17 @@
+// reset
+
+*{ // à mettre également sur ::before et ::after = https://youtu.be/_mHThcsHkOM?t=185
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; // ajuste mieux les boites, meilleure organisation
+    outline: none;
+
+    // debug contenu en dehors de la fenêtre
+    // box-shadow: 0 0 0 3px red inset;
+
+}
+
+li{    
+    list-style-type: none; // pas de point pour les listes
+}
+

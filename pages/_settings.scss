@@ -1,0 +1,34 @@
+
+/* Fonts Google Oswald https://fonts.google.com/specimen/Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* Fonts téléchargée sur Google et mis dans le dossier puis importée dans le projet
+https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
+@font-face {
+    font-family: "DMSerif";
+    src: url(./assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+// variables
+// colors http://davidbau.com/colors/
+$color0: white;
+$color1: black;
+$color2: grey;
+$color3: grey;
+$color4: grey;
+
+$background: #0D2847;
+$interactive-components: #66350C;
+$borders-separators: #484848;
+$solid: #7B7B7B;
+$text: #FFE0C2;
+
+
+$font1: 'font1', serif, sans-serif;
+
+
+

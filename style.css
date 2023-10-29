@@ -1,0 +1,90 @@
+
+/* Fonts Google Oswald https://fonts.google.com/specimen/Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* Fonts téléchargée sur Google et mis dans le dossier puis importée dans le projet
+https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
+@font-face {
+    font-family: "DMSerif";
+    src: url(./assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+}
+
+
+:root{ /* Prend en compte les variables suivantes dans le fichier : */
+    --color1: #ede4d0;
+    --color2: pink ;
+    --color3: #393b4b;
+    --color4: rgb(18, 19, 18)   ;
+
+    --color11:blue;
+    --color12:fuchsia;
+    /* couleur : http://davidbau.com/colors/ */
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* ajuste mieux les boites, meilleure organisation */
+    list-style-type: none;
+    outline: none;
+
+}
+
+li {
+    list-style: none; /* pas de points pour les listes */
+}
+
+
+
+body{ /*display block(prend toute la largeur de la page) et margin 8px de base */
+min-height: 100vh;
+/* background: url(./assets/img/nuit.jpg) center/cover; */
+background:  rgb(41, 41, 41);
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color : var(--color1);
+display: flex;
+align-items: center; /* aligne veticalement les éléments */
+justify-content: center; /* aligne horizontalement les éléments */
+overflow: hidden; /* cache tout ce qui dépasse du body (vaisseau qui sort de l'écran */
+
+
+
+}
+.card {
+    background: #0000009c;
+    width: calc(100% - 100px); /* Prend toute la largeur - 100px */ 
+    padding: 20px 20px 6px; /* espace sur les bords dans le cadre */
+    box-shadow: -4px 8px 13px 8px black;
+    border-radius: 5px; /* arrondir les bords du cadre */
+    backdrop-filter: blur(2px); /* flou dans le cadre, compatibilité https://caniuse.com/?search=backdrop%20filter */
+}
+
+
+
+
+
+
+/* ************** MEDIA QUERIES ************** */
+/* RESPONSIVE  https://youtu.be/iSWjmVcfQGg?t=7485 */
+
+
+@media screen and (max-width: 870px) { /* Tablette, actif si max-width à 870px */
+}
+  
+@media screen and (max-width: 650px) { /* Mobile, actif si max-width à 650px */
+}
+
+
+
+
+
+/* Pseudo classes :
+after, before, checked, focus, placeholder, active, hover, visited              
+
+Filter :
+drop-shadow(), brightness(), blur()
+
+*/
+

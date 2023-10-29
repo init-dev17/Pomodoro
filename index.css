@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Fonts Google Oswald https://fonts.google.com/specimen/Oswald */
+/* Fonts téléchargée sur Google et mis dans le dossier puis importée dans le projet
+https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
+@font-face {
+  font-family: "DMSerif";
+  src: url(./assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+nav ul {
+  display: flex;
+  color: white;
+}
+
+body {
+  background: #0D2847;
+  font-family: "font1", serif, sans-serif;
+}
+body .compteur {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */
