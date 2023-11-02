@@ -25,7 +25,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="icon" href="./assets/img/icon.png" />
+    <link rel="icon" href="./assets/img/Button_Icon_Red.png" />
 
     <link rel="stylesheet" href="./index.css" />
 
@@ -35,26 +35,48 @@
   <header></header>
 
   <nav>
-    <ul>
+    <ul id="nav1">
       <li>Accueil</li>
       <li>Projets</li>
       <li>Statistiques</li>
+    </ul>
+
+    <ul id="nav2">
       <li>Notifications</li>
       <li>Paramètres</li>
       <li>Login</li>
-      <li id="language">FR | EN</li>
+      <li id="language">Langue</li>
     </ul>
   </nav>
 
   <aside></aside>
 
   <body>
-    <div class="compteur">
-      <h1>25:00</h1>
-      <button id="start">Démarrer</button>
-      <button id="pause">Pause</button>
-    </div>
+    <section id="section1">
+      <div class="compteur">
+        <h1>25:00</h1>
+        <div>
+          <button id="start">Démarrer</button>
+          <button id="pause">Pause</button>
+          <button id="next">Passer</button>
+        </div>
+      </div>
+    </section>
 
-    <footer></footer>
+    <footer>
+      <!-- Menu déroulant pour le choix de l'arrière-plan
+      <label for="background-select">Choisir un arrière-plan:</label>
+
+      <select name="background" id="background-select">
+        <option value="">--Choisir une option--</option>
+        <option value="neige">Neige</option>
+        <option value="nuit">Nuit</option>
+        <option value="pluie">Pluie</option>
+        <option value="coree">Corée</option>
+        <option value="new-york">New York</option>
+        <option value="central-park">Central Park</option>
+      </select>
+      -->
+    </footer>
   </body>
 </html>

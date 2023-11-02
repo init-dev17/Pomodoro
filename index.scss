@@ -25,14 +25,24 @@
 
 body{
     background: $background; //url(../assets/img/bg.jpg) fixed center/cover;
+    // background: url(./assets/img/neige-autriche.jpg) fixed center/cover;
+    // background: url(./assets/img/nuit.jpg) fixed center/cover;
+    
     font-family: $font1;
 
     
+    #section1 {
+        .compteur {
+            display: flex;
+            flex-direction: column;
 
-    .compteur {
-        color: white;
-        font-size: 30px;
-        text-align: center;
+            color: white;
+            font-size: 30px;        
+            text-align: center;
+            min-height: 80vh;
+            justify-content: center;
+            
+             
+        }
     }
-
 }

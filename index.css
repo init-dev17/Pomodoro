@@ -20,17 +20,63 @@ https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
   font-style: normal;
   font-weight: normal;
 }
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
 nav ul {
   display: flex;
   color: white;
+}
+nav ul li {
+  margin: 0 auto;
+}
+
+#next {
+  color: black;
+}
+
+#section1 button {
+  font-size: 1.2rem;
+  padding: 4px 10px;
+  color: whitesmoke;
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  outline: none;
+  transition: 0.4s ease;
+}
+#section1 #start {
+  background-color: green;
+}
+#section1 #start:hover {
+  font-size: 1.4rem;
+}
+#section1 #start:active {
+  font-size: 1.7rem;
+}
+
+.inactive-btn {
+  background-color: transparent;
 }
 
 body {
   background: #0D2847;
   font-family: "font1", serif, sans-serif;
 }
-body .compteur {
+body #section1 .compteur {
+  display: flex;
+  flex-direction: column;
   color: white;
   font-size: 30px;
   text-align: center;
+  min-height: 80vh;
+  justify-content: center;
 }/*# sourceMappingURL=index.css.map */

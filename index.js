@@ -4,6 +4,8 @@ let timeOut;
 
 let compteur = document.querySelector(".compteur h1");
 let start = document.querySelector("#start");
+let pause = document.querySelector("#pause");
+let next = document.querySelector("#next");
 
 let finPomodoro = new Audio("/assets/audio/finPomodoro.mp3"); // https://lasonotheque.org/detail-1111-message-1.html
 // console.log(finPomodoro);
@@ -24,11 +26,19 @@ function countDown() {
 
   // Si le temps(en secondes) > 0, continuez le décompte et le décrémenter
   if (timeOut > 0) {
+    start.style.background = "black";
+    pause.style.background = "orange";
+    next.style.background = "red";
+
     setTimeout(countDown, 1);
     timeOut--;
   } else if (timeOut == 0) {
     console.log("Fin du programme");
     finPomodoro.play();
+
+    start.style.background = "green";
+    pause.style.background = "transparent";
+    next.style.background = "transparent";
 
     // Incrémenter le choix
     // Réinitialiser le choix à 0 si après le temps de pause 15 minutes
@@ -38,6 +48,10 @@ function countDown() {
     } else {
       choix = 0;
     }
+
+    // if choix impair : cacher le bouton "Démarrer" et afficher bouton "Passer"
+    // ou rendre incliquable "Démarrer"
+
     console.log("Tour Pomodoro : ", choix);
     return 0;
   }
@@ -58,6 +72,14 @@ start.addEventListener("click", () => {
   console.log("Temps déterminé pour le Pomodoro : ", duree, "minutes");
 
   countDown();
+});
+
+// si appui sur bouton "Passer", passe à la prochaine étape du pomodoro
+next.addEventListener("click", () => {
+  console.log("click event sur next");
+  console.log(timeOut);
+  timeOut = 0;
+  console.log(timeOut);
 });
 
 //
