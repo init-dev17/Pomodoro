@@ -21,17 +21,38 @@ https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
   font-weight: normal;
 }
 nav {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 50px;
-  align-items: center;
+  justify-content: flex-end;
 }
 nav ul {
+  position: absolute;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   color: white;
+  height: 100vh;
+  width: 180px;
+  background-color: #004074;
 }
 nav ul li {
+  margin: 0 auto;
+}
+
+#tasks {
+  position: relative;
+}
+#tasks ul {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  height: 100vh;
+  width: 250px;
+  background-color: #004074;
+}
+#tasks ul li {
   margin: 0 auto;
 }
 

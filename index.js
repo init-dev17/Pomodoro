@@ -30,7 +30,7 @@ function countDown() {
     pause.style.background = "orange";
     next.style.background = "red";
 
-    setTimeout(countDown, 1);
+    setTimeout(countDown, 1000);
     timeOut--;
   } else if (timeOut == 0) {
     console.log("Fin du programme");

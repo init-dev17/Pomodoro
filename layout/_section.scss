@@ -1,0 +1,23 @@
+
+#tasks{
+    position: relative;
+
+    ul{
+        position: absolute;
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-evenly;
+        color: white;
+        height: 100vh;
+        width: 250px;
+        background-color: $interactive-components;
+        // file:///home/lian/Documents/Developpement/VScode/devfromscratch/JavaScript-2-DOM/TP4-Sidebar/index.html
+        
+       li{
+        margin: 0 auto;
+        }
+    }
+
+
+}
+
