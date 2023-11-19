@@ -73,7 +73,6 @@ https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
      -moz-user-select: none;
           user-select: none;
   outline: none;
-  transition: 0.4s ease;
 }
 #section1 #start {
   background-color: green;
