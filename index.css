@@ -20,29 +20,11 @@ https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
   font-style: normal;
   font-weight: normal;
 }
-nav {
+.sidebar {
   position: relative;
-  display: flex;
-  justify-content: flex-end;
+  transition: 0.5s ease-out;
 }
-nav ul {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  color: white;
-  height: 100vh;
-  width: 180px;
-  background-color: #004074;
-}
-nav ul li {
-  margin: 0 auto;
-}
-
-#tasks {
-  position: relative;
-}
-#tasks ul {
+.sidebar ul {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -52,8 +34,27 @@ nav ul li {
   width: 250px;
   background-color: #004074;
 }
-#tasks ul li {
-  margin: 0 auto;
+.sidebar ul li {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+#left-sidebar {
+  left: -250px;
+}
+
+#left-sidebar.active {
+  left: 0;
+}
+
+#right-sidebar {
+  display: flex;
+  justify-content: flex-end;
+  right: -250px;
+}
+
+#right-sidebar.active {
+  right: 0;
 }
 
 #next {
@@ -88,6 +89,56 @@ nav ul li {
   background-color: transparent;
 }
 
+.toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+#right-btn {
+  left: calc(100% - 300px);
+}
+
+.toggle-btn span {
+  width: 50px;
+  height: 8px;
+  border-radius: 5px;
+  background: whitesmoke;
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+
+li:hover {
+  background: #292929;
+  cursor: pointer;
+}
+
+.active span { /* quand classe .active, met les span en absolute */
+  position: absolute;
+}
+
+.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/*
+.active ~ .content { 
+    // si la classe .active existe, alors sur la classe .content :
+    opacity: 0.3;
+}
+*/
 body {
   background: #0D2847;
   font-family: "font1", serif, sans-serif;

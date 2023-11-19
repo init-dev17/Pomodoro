@@ -1,6 +1,8 @@
 
-#tasks{
+.sidebar{
     position: relative;
+    transition: 0.5s ease-out;
+
 
     ul{
         position: absolute;
@@ -14,10 +16,25 @@
         // file:///home/lian/Documents/Developpement/VScode/devfromscratch/JavaScript-2-DOM/TP4-Sidebar/index.html
         
        li{
-        margin: 0 auto;
+        text-align: center;
+        // margin: 0 auto;
+        font-size: 1.4rem;
         }
     }
-
-
 }
 
+#left-sidebar {
+    left: -250px;
+}
+#left-sidebar.active{ 
+    left:0;
+}
+
+#right-sidebar{
+    display: flex;
+    justify-content: flex-end;
+    right: -250px;
+}
+#right-sidebar.active{ 
+    right:0;
+}
